@@ -46,7 +46,7 @@ void hex_dump(const unsigned char *buffer, size_t size)
 
 			printf("  |  ");
 
-			for(j=j; j<=i; ++j)
+			for(; j<=i; ++j)
 			{
 				if(j%8 == 0  &&  j!= 0  &&  j%16 != 0)  printf("  ");
 				if(31 < buffer[j]  &&  buffer[j] < 127)  printf("%c", buffer[j]);
