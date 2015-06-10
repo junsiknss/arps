@@ -11,7 +11,7 @@
 
 BIN = ArpSpoof
 CC = gcc
-CFLAGS = -W -Wall  -g
+CFLAGS = -W -Wall
 
 all: main.o CmdLineTtmt.o ArpSpoof.o 
 	$(CC) $^ -o $(BIN) $(CFLAGS)
