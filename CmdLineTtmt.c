@@ -67,7 +67,7 @@ int str_mac_check(const char *strMac)
 		else
 		{
 			if(strMac[i] < 0x30 || strMac[i] > 0x39)
-                                if(strMac[i] < 0x61 || strMac[i] > 0x68)
+                                if(strMac[i] < 0x61 || strMac[i] > 0x66)
                                         if(strMac[i] < 0x41 || strMac[i] > 0x46)
                                                 return -1;
 		}
