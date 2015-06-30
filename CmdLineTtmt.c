@@ -21,7 +21,7 @@ int interface_check(const char *interface)
 		return -1;
 
 	return 0;
-};
+}
 
 // Performs the mac address verification in the string representation.
 //
@@ -74,7 +74,7 @@ int str_mac_check(const char *strMac)
 	}
 
 	return 0;
-};
+}
 
 // Performs the ip address verification in the string representation.
 //
@@ -85,15 +85,18 @@ int str_mac_check(const char *strMac)
 //
 int str_ipv4_check(const char *ip)
 {
-	struct in_addr addr;
+        unsigned int binIp = 0;
 
-	if(inet_aton(ip, &addr) == 0)
-	{
+        if(ip == NULL)
+                return -1;
+
+        if(inet_pton(AF_INET, ip, &binIp) == 0)
                return -1;
-       	}
 
-	return 0;
-};
+        return 0;
+}
+
+
 
 // Checks the command line's parameters.
 //
