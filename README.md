@@ -1,11 +1,22 @@
-# ArpSpoof
-##ARP cache poisoning's program for the MITM attack
+# ArpSpoof: ARP cache poisoner
 
-more information about this attack: [https://www.owasp.org/index.php/Man-in-the-middle_attack](https://www.owasp.org/index.php/Man-in-the-middle_attack)
+ArpSpoof is a simple ARP cache poisoning program coded in C. This a very little and simple tool, which provides an interface to throw a Man In The Middle attack in a local network and intercep the network traffic of the victim. 
 
-Compile the ArpSpoof program:
+- Synopsis
+- Description
+- Options
+- Example
+- Links
 
-<code>$ make && make clean</code>
+# Synopsis
+
+Building the ARPSpoof program.
+
+```
+$ git clone https://github.com/VincentDary/ArpSpoof.git
+$ cd ArpSpoof
+$ make && make clean
+```
 
 Usage:
 
@@ -13,15 +24,39 @@ Usage:
 # ./ArpSpoof
 #  usage: ArpSpoof <interface> <target mac> <target IPv4> <source mac> <fake IPv4>
 ```
-Example:
 
-```
-#./ArpSpoof eth0 00:A0:D1:DC:79:80 192.168.1.56 00:11:50:22:55:14 192.168.1.1
+# Description
 
-  ARP packet write on wire, 42 bytes :
+ArpSpoof is a ARP cache poisoning program for the MITM attack based on ARP poisoning, more information about this attack [2].
 
- 00 a0 d1 dc 79 80 00 11   50 22 55 14 08 06 00 01  |  ....y...  P"U.....
- 08 00 06 04 00 01 00 11   50 22 55 14 c0 a8 01 01  |  ........  P"U.....
- 00 a0 d1 dc 79 80 c0 a8   01 38 .. .. .. .. .. ..  |  ....y...  .8
+# Options
 
-```
+- interface
+
+The network interface where to start the ARP packets injection.
+
+
+- target mac
+
+The target MAC address of the victim.
+
+
+- target IPv4
+
+The target IPv4 address of the victim.
+
+
+- source mac
+
+The source MAC address associated to the <interface> parameter, where the ARP packets injection is started.
+
+
+- fake IPv4
+
+The IPv4 address to usurp.
+
+
+Note:
+
+This tool doesn't forward the network traffic of the victim. It's more flexible solution. You can use an other tool for this or enable it on your machine or on the machine where the network traffic is redirect. 
+
