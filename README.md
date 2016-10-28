@@ -27,7 +27,7 @@ Usage:
 
 # Description
 
-ArpSpoof is a ARP cache poisoning program for the MITM attack based on ARP poisoning, more information about this attack [2].
+ArpSpoof is a ARP cache poisoning program for the MITM attack based on ARP poisoning, more information about this [attack](https://www.information-security.fr/attaque-man-in-the-middle-via-arp-spoofing/).
 
 # Options
 
@@ -88,6 +88,6 @@ IPv4 = 192.168.1.1
 
 [1] MITM attack based on ARP poisoning:
 
-[ http://www.keithloughnane.com/2012/12/man-in-middle-1b-arp-cache-poisoning.html]( http://www.keithloughnane.com/2012/12/man-in-middle-1b-arp-cache-poisoning.html)
+[ https://www.information-security.fr/attaque-man-in-the-middle-via-arp-spoofing/]( https://www.information-security.fr/attaque-man-in-the-middle-via-arp-spoofing/)
 
 
