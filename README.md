@@ -1,6 +1,6 @@
 # ArpSpoof: ARP cache poisoner
 
-ArpSpoof is a simple ARP cache poisoning program coded in C. This a very little and simple tool, which provides an interface to throw a Man In The Middle attack in a local network and intercep the network traffic of the victim. 
+ArpSpoof is a simple ARP cache poisoning program coded in C. This a very little and simple tool, which provides an interface to throw a Man In The Middle attack in a local network and intercept the network traffic of the victim.
 
 - Synopsis
 - Description
@@ -10,7 +10,7 @@ ArpSpoof is a simple ARP cache poisoning program coded in C. This a very little 
 
 # Synopsis
 
-Building the ARPSpoof program.
+Get and build ArpSpoof.
 
 ```
 $ git clone https://github.com/VincentDary/ArpSpoof.git
@@ -58,7 +58,7 @@ The IPv4 address to usurp.
 
 Note:
 
-This tool doesn't forward the network traffic of the victim. It's more flexible solution. You can use an other tool for this or enable it on your machine or on the machine where the network traffic is redirect. 
+This tool doesn't forward the network traffic of the victim. It's more flexible solution. You can use an other tool for this or enable it on your machine or on the machine where the network traffic is redirect.
 
 ## Example
 
@@ -89,5 +89,3 @@ IPv4 = 192.168.1.1
 [1] MITM attack based on ARP poisoning:
 
 [ https://www.information-security.fr/attaque-man-in-the-middle-via-arp-spoofing/]( https://www.information-security.fr/attaque-man-in-the-middle-via-arp-spoofing/)
-
-
